@@ -324,7 +324,9 @@ body {
   background-color: #4d5ae5;
   border-radius: 50%;
 }
-
+.social-link-item:hover .social-link {
+  background-color: #404bbf;
+}
 /* section 4-portfolio */
 
 .portfolio-main {
@@ -449,13 +451,6 @@ body {
   margin-bottom: 16px;
   margin-right: 269px;
 }
-/* ----------------------FLEX------------------------- */
-/* HEADER */
-
-/* NAVIGATION */
-/* Button */
-/* section 2 */
-/* section 3 */
-
-/* section 4 */
-/* footer */
+.footer-social-links:hover .social-link {
+  background-color: #31d0aa;
+}
