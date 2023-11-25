@@ -52,7 +52,9 @@ button {
   padding-bottom: 120px;
   padding-top: 120px;
 }
+
 /* body */
+
 body {
   color: #434455;
   background-color: #ffffff;
@@ -63,7 +65,9 @@ body {
   letter-spacing: 0px;
   text-align: left;
 }
+
 /* HEADER */
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -77,7 +81,9 @@ body {
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid #e7e9fc;
 }
+
 /* logotype */
+
 .logo {
   color: #2e2f42;
 }
@@ -94,13 +100,16 @@ body {
 .header-logotype {
   margin-right: 76px;
 }
+
 /* navigation */
 .nav-menu-item:first-child::after {
   content: '';
   position: absolute;
+  left: 0;
+  bottom: -1px;
   display: block;
   border-radius: 2px;
-  background: var(--OCEAN, #404bbf);
+  background-color: #404bbf;
   width: 48px;
   height: 4px;
 }
@@ -115,22 +124,18 @@ body {
   text-align: left;
   padding-bottom: 24px;
   padding-top: 24px;
-  transition: color 250ms linear;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.nav {
-  display: flex;
+.studio {
+  position: relative;
+  color: #404bbf;
+}
+.nav-menu {
+  display: inline-flex;
   gap: 40px;
   width: 933;
   justify-content: space-between;
   align-items: center;
-}
-.nav-menu {
-  display: flex;
-  gap: 40px;
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 40px;
 }
 .nav-menu-link:hover,
 .nav-menu-link:focus {
@@ -149,7 +154,7 @@ body {
   line-height: 24px;
   letter-spacing: 0.02em;
   text-align: left;
-  transition: color 250ms linear;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-list-mailto:hover,
 .contact-list-mailto:focus {
@@ -168,7 +173,7 @@ body {
   line-height: 24px;
   letter-spacing: 0.04em;
   text-align: left;
-  transition: background-color 250ms linear;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -190,12 +195,12 @@ body {
 }
 .hero-image {
   padding: 188px 0;
-  width: 1440px;
+  max-width: 1440px;
   margin: auto;
   background-color: #2e2f42;
   background-image: linear-gradient(
-      rgba(47, 47, 66, 0.5),
-      rgba(47, 47, 66, 0.5)
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
     ),
     url(/images/people-office\ 1.png);
   background-repeat: no-repeat;
@@ -220,6 +225,7 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: left;
+  margin-top: 0;
 }
 .advantages-text {
   color: #434455;
@@ -239,6 +245,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 8px;
 }
 .advantages {
   margin-bottom: 8px;
@@ -309,12 +316,13 @@ body {
 
 .social-list {
   display: flex;
-  justify-content: space-evenly;
-  column-gap: 24px;
+  justify-content: center;
+  gap: 24px;
 }
 .social-link-icon {
   fill: #f4f4fd;
 }
+
 .social-link {
   display: flex;
   justify-content: center;
@@ -323,10 +331,14 @@ body {
   height: 40px;
   background-color: #4d5ae5;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-link-item:hover .social-link {
+
+.social-link:hover,
+social-link:focus {
   background-color: #404bbf;
 }
+
 /* section 4-portfolio */
 
 .portfolio-main {
@@ -366,7 +378,7 @@ body {
 }
 .portfolio-list-main {
   width: calc((100% - 48px) / 3);
-  transition: transform 250ms linear;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-main:hover {
   border: 1px solid var(--CLOUD, #f4f4fd);
@@ -406,7 +418,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-.portfolio-list-main:hover .overlay-item {
+.portfolio-list-main:hover .overlay-text {
   transform: translateY(0%);
 }
 /* footer */
